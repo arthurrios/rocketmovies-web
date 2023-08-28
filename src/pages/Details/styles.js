@@ -21,13 +21,6 @@ export const TitleWithStars = styled.div`
   align-items: center;
   gap: 1.5rem;
   margin-top: 1.5rem;
-
-  > div {
-    display: flex;
-    gap: 0.625rem;
-    font-size: 1.25rem;
-    color: ${({ theme }) => theme.colors.pink};
-  }
 `
 export const AuthorAndDate = styled.div`
   margin-top: 1.5rem;
@@ -35,6 +28,7 @@ export const AuthorAndDate = styled.div`
   display: flex;
   gap: 1rem;
   align-items: center;
+  margin-bottom: 2.5rem;
 
   > div {
     display: flex;
@@ -52,9 +46,4 @@ export const AuthorAndDate = styled.div`
       color: ${({ theme }) => theme.colors.pink};
     }
   }
-`
-export const Tags = styled.div`
-  display: flex;
-  gap: 0.5rem;
-  margin-top: 2.5rem;
 `

@@ -12,6 +12,7 @@ export const Container = styled.header`
   padding: 1.5rem 7.6875rem;
 
   > h1 {
+    font-size: 1.5rem;
     margin-right: 4rem;
     color: ${({ theme }) => theme.colors.pink};
   }

@@ -12,6 +12,7 @@ export default createGlobalStyle`
     color: ${({ theme }) => theme.colors.white};
 
     -webkit-font-smoothing: antialiased;
+    overflow: hidden;
   }
 
   body, input, button, textarea {
@@ -35,6 +36,7 @@ export default createGlobalStyle`
 
   ::-webkit-scrollbar {
     width: 0.5rem;
+    background-color: transparent;
   }
 
   ::-webkit-scrollbar-track {
