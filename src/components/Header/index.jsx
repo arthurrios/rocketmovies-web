@@ -7,7 +7,7 @@ export function Header() {
       <h1>RocketMovies</h1>
       <div>
         <Input placeholder="Pesquisar pelo título" />
-        <Profile href="#">
+        <Profile>
           <div>
             <strong>Arthur Rios</strong>
             <a href="#">sair</a>

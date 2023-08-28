@@ -4,12 +4,15 @@ export const Container = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
+  background-color: ${({ theme }) => theme.colors.gray_800};
+  color: ${({ theme }) => theme.colors.gray_200};
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  gap: 0.75rem;
 
   > input {
     width: 100%;
-    padding: 1rem 1.5rem;
     border: none;
-    border-radius: 10px;
     background-color: ${({ theme }) => theme.colors.gray_800};
     color: ${({ theme }) => theme.colors.white};
 

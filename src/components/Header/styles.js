@@ -23,7 +23,7 @@ export const Container = styled.header`
     align-items: center;
   }
 `
-export const Profile = styled.a`
+export const Profile = styled.div`
   display: flex;
   align-items: center;
   gap: 0.75rem;
