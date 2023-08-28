@@ -2,8 +2,10 @@ import { styled } from 'styled-components'
 
 export const Container = styled.button`
   width: 100%;
-  background-color: ${({ theme }) => theme.colors.pink};
-  color: ${({ theme }) => theme.colors.gray_900};
+  background-color: ${({ theme, $exclude }) =>
+    $exclude === 'true' ? theme.colors.gray_dark : theme.colors.pink};
+  color: ${({ theme, $exclude }) =>
+    $exclude === 'true' ? theme.colors.pink : theme.colors.gray_900};
 
   height: 3rem;
   border: 0;

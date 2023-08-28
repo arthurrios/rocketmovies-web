@@ -1,5 +1,6 @@
 export default {
   colors: {
+    gray_dark: '#0D0C0F',
     gray_900: '#1C1B1E',
     gray_800: '#262529',
     gray_700: '#312E38',

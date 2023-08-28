@@ -11,6 +11,7 @@ export const Container = styled.div`
   gap: 0.75rem;
 
   > input {
+    font-family: 'Roboto', sans-serif;
     width: 100%;
     border: none;
     background-color: ${({ theme }) => theme.colors.gray_800};
