@@ -5,13 +5,16 @@ import { Input } from '../../components/Input'
 import { Button } from '../../components/Button'
 import { TextArea } from '../../components/TextArea'
 import { MovieItem } from '../../components/MovieItem'
+import { Link } from 'react-router-dom'
 
 export function NewMovie() {
   return (
     <>
       <Header />
       <Container>
-        <ReturnButton />
+        <Link to="/">
+          <ReturnButton />
+        </Link>
         <main>
           <h1>Novo filme</h1>
           <Form>

@@ -3,6 +3,7 @@ import { Input } from '../../components/Input'
 import { Background, Container, Form } from './styles'
 import { Button } from '../../components/Button'
 import { IoMdArrowBack } from 'react-icons/io'
+import { Link } from 'react-router-dom'
 
 export function SignUp() {
   return (
@@ -18,10 +19,10 @@ export function SignUp() {
         <Input type="password" placeholder="Senha" icon={FiLock} />
         <Button title="Entrar" />
 
-        <a href="#">
+        <Link to="/">
           <IoMdArrowBack />
           Voltar para o login
-        </a>
+        </Link>
       </Form>
       <Background />
     </Container>

@@ -12,6 +12,7 @@ export const Container = styled.textarea`
   resize: none;
 
   &::placeholder {
+    font-family: 'Roboto', sans-serif;
     color: ${({ theme }) => theme.colors.gray_200};
     font-size: 0.875rem;
   }
