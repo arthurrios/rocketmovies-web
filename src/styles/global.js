@@ -32,4 +32,17 @@ export default createGlobalStyle`
   button:not(:disabled):hover, a:not(:disabled):hover {
     filter: brightness(0.9)
   }
+
+  ::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+
+  ::-webkit-scrollbar-track {
+    width: 1.5rem;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background: ${({ theme }) => theme.colors.pink};
+  }
 `
