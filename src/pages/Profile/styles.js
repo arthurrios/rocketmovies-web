@@ -11,6 +11,11 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     padding: 4rem 9rem;
+
+    > button {
+      background: none;
+      border: 0;
+    }
   }
 `
 export const Form = styled.form`

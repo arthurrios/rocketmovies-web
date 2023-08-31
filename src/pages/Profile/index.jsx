@@ -3,15 +3,21 @@ import { Avatar, Container, Form } from './styles'
 import { Input } from '../../components/Input'
 import { Button } from '../../components/Button'
 import { ReturnButton } from '../../components/ReturnButton'
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 export function Profile() {
+  const navigate = useNavigate()
+
+  function handleBack() {
+    navigate(-1)
+  }
+
   return (
     <Container>
       <header>
-        <Link to="/">
+        <button type="button" onClick={handleBack}>
           <ReturnButton />
-        </Link>
+        </button>
       </header>
       <Form>
         <Avatar>
