@@ -6,7 +6,7 @@ export function MovieItem({ isnew, value, onClick, ...props }) {
     if (!isnew) {
       const { length } = value
 
-      const inputLength = (length * 8 + 2) / 16
+      const inputLength = (length * 8 + 25) / 16
 
       return inputLength
     }
@@ -18,10 +18,10 @@ export function MovieItem({ isnew, value, onClick, ...props }) {
         type="text"
         value={value}
         readOnly={!isnew}
-        style={{ width: `${InputLength()}rem` }}
+        style={{ width: `${InputLength()}rem`, textTransform: 'capitalize' }}
         {...props}
       />
-      <button onClick={onClick} type="button">
+      <button type="button" onClick={onClick}>
         {isnew ? <FiPlus /> : <FiX />}
       </button>
     </Container>
