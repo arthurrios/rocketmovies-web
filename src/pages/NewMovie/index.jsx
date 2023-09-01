@@ -8,8 +8,12 @@ import { MovieItem } from '../../components/MovieItem'
 import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import { api } from '../../services/api'
+import { useAuth } from '../../hooks/auth'
 
 export function NewMovie() {
+  const { user } = useAuth()
+  const author = user.name
+
   const [title, setTitle] = useState('')
   const [rating, setRating] = useState('')
   const [description, setDescription] = useState('')
@@ -60,6 +64,7 @@ export function NewMovie() {
       rating,
       description,
       tags,
+      author,
     })
 
     alert('Movie note created successfully!')
@@ -112,7 +117,6 @@ export function NewMovie() {
             </Tags>
 
             <div className="buttons">
-              <Button exclude title="Excluir filme" />
               <Button title="Salvar alterações" onClick={handleNewNote} />
             </div>
           </Form>

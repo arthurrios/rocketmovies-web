@@ -1,11 +1,11 @@
 import { styled } from 'styled-components'
 
 export const Container = styled.div`
-  padding: 2.25rem 7.6875rem 0;
+  padding: 0rem 7.6875rem;
 
   > main {
     padding-right: 1.5rem;
-    max-height: 36.375rem;
+    max-height: 32.375rem;
     width: 100%;
     overflow-y: auto;
 
@@ -13,6 +13,9 @@ export const Container = styled.div`
       margin-top: 2.5rem;
       text-align: justify;
     }
+  }
+  > button {
+    margin-top: 2.5rem;
   }
 `
 
@@ -22,6 +25,13 @@ export const TitleWithStars = styled.div`
   gap: 1.5rem;
   margin-top: 1.5rem;
 `
+export const Stars = styled.div`
+  display: flex;
+  gap: 0.625rem;
+  font-size: 1.25rem;
+  color: ${({ theme }) => theme.colors.pink};
+`
+
 export const AuthorAndDate = styled.div`
   margin-top: 1.5rem;
   font-family: 'Roboto', sans-serif;

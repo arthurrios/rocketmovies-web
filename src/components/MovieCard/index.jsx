@@ -1,13 +1,20 @@
 /* eslint-disable react/no-unescaped-entities */
-import { Stars } from '../Stars'
-import { Container } from './styles'
+import { Container, Stars } from './styles'
 import { Tags } from '../Tags'
+import { IoStar, IoStarOutline } from 'react-icons/io5'
 
 export function MovieCard() {
   return (
     <Container>
       <h2>Interestellar</h2>
-      <Stars sm />
+      {/* <Stars>
+        {Array.from({ length: stars }, (_, index) => (
+          <IoStar key={index} />
+        ))}
+        {Array.from({ length: outlinedStars }, (_, index) => (
+          <IoStarOutline key={index} />
+        ))}
+      </Stars> */}
       <p>
         Pragas nas colheitas fizeram a civilização humana regredir para uma
         sociedade agrária em futuro de data desconhecida. Cooper, ex-piloto da

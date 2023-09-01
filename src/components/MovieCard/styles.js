@@ -25,3 +25,10 @@ export const Container = styled.div`
     -webkit-box-orient: vertical;
   }
 `
+
+export const Stars = styled.div`
+  display: flex;
+  gap: 0.375rem;
+  font-size: 0.75rem;
+  color: ${({ theme }) => theme.colors.pink};
+`
