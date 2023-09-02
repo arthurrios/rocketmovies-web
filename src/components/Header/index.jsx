@@ -2,10 +2,16 @@ import { useNavigate } from 'react-router-dom'
 import { Input } from '../Input'
 import { Container, HomeLink, Profile } from './styles'
 import { useAuth } from '../../hooks/auth'
+import { api } from '../../services/api'
+import avatarPlaceholder from '../../assets/avatar_placeholder.svg'
 
 export function Header() {
   const { signOut, user } = useAuth()
   const navigate = useNavigate()
+
+  const userAvatar = user.avatar
+    ? `${api.defaults.baseURL}/files/${user.avatar}`
+    : avatarPlaceholder
 
   function handleProfile() {
     navigate('/profile')
@@ -30,7 +36,7 @@ export function Header() {
               type="button"
               onClick={handleProfile}
             >
-              Arthur Rios
+              {user.name}
             </button>
             <button
               type="button"
@@ -45,10 +51,7 @@ export function Header() {
             className="profile-image"
             onClick={handleProfile}
           >
-            <img
-              src="https://github.com/arthurrios.png"
-              alt="Foto do usuário"
-            />
+            <img src={userAvatar} alt="Foto do usuário" />
           </button>
         </Profile>
       </div>

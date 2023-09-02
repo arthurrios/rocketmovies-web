@@ -4,8 +4,9 @@ export const Container = styled.div`
   padding: 0rem 7.6875rem;
 
   > main {
+    margin-top: 2rem;
     padding-right: 1.5rem;
-    max-height: 32.375rem;
+    max-height: 29rem;
     width: 100%;
     overflow-y: auto;
 
@@ -23,7 +24,6 @@ export const TitleWithStars = styled.div`
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  margin-top: 1.5rem;
 `
 export const Stars = styled.div`
   display: flex;

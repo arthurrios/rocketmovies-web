@@ -22,6 +22,15 @@ export function Details() {
     ? `${api.defaults.baseURL}/files/${data.author_avatar}`
     : avatarPlaceholder
 
+  async function handleRemove() {
+    const confirm = window.confirm('Are you sure you want to delete this note?')
+
+    if (confirm) {
+      await api.delete(`/notes/${params.id}`)
+      navigate(-1)
+    }
+  }
+
   function handleBack() {
     navigate(-1)
   }
@@ -79,7 +88,7 @@ export function Details() {
               {data.tags && <Tags data={data} />}
               <p style={{ whiteSpace: 'pre-wrap' }}>{data.description}</p>
             </main>
-            <Button exclude title="Excluir filme" />
+            <Button exclude title="Excluir filme" onClick={handleRemove} />
           </>
         )}
       </Container>

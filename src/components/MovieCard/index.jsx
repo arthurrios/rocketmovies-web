@@ -1,20 +1,14 @@
 /* eslint-disable react/no-unescaped-entities */
-import { Container, Stars } from './styles'
+import { Container } from './styles'
 import { Tags } from '../Tags'
 import { IoStar, IoStarOutline } from 'react-icons/io5'
+import { Stars } from '../Stars'
 
 export function MovieCard() {
   return (
     <Container>
       <h2>Interestellar</h2>
-      {/* <Stars>
-        {Array.from({ length: stars }, (_, index) => (
-          <IoStar key={index} />
-        ))}
-        {Array.from({ length: outlinedStars }, (_, index) => (
-          <IoStarOutline key={index} />
-        ))}
-      </Stars> */}
+      <Stars />
       <p>
         Pragas nas colheitas fizeram a civilização humana regredir para uma
         sociedade agrária em futuro de data desconhecida. Cooper, ex-piloto da
@@ -35,7 +29,7 @@ export function MovieCard() {
         instalação da NASA, que é na realidade uma enorme estação espacial. A
         partida de Cooper devasta Murphy.
       </p>
-      <Tags card />
+      {/* <Tags card /> */}
     </Container>
   )
 }
