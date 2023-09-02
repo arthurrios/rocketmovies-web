@@ -64,7 +64,7 @@ export function Details() {
 
     fetchCreatedAt()
   }, [params.id])
-  console.log(data.tags)
+
   return (
     <>
       <Header />
