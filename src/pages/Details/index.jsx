@@ -2,22 +2,24 @@
 import { LuClock3 } from 'react-icons/lu'
 import { Header } from '../../components/Header'
 import { ReturnButton } from '../../components/ReturnButton'
-import { AuthorAndDate, Container, TitleWithStars, Stars } from './styles'
+import { AuthorAndDate, Container, TitleWithStars } from './styles'
 import { Tags } from '../../components/Tags'
 import { Button } from '../../components/Button'
 import { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { api } from '../../services/api'
-import { IoStar, IoStarOutline } from 'react-icons/io5'
+import { Stars } from '../../components/Stars'
+import avatarPlaceholder from '../../assets/avatar_placeholder.svg'
 
 export function Details() {
-  const [data, setData] = useState(null)
+  const [data, setData] = useState({})
 
   const params = useParams()
   const navigate = useNavigate()
 
-  // const stars = data.rating
-  // const outlinedStars = 5 - data.rating
+  const authorAvatar = data.author_avatar
+    ? `${api.defaults.baseURL}/files/${data.author_avatar}`
+    : avatarPlaceholder
 
   function handleBack() {
     navigate(-1)
@@ -42,21 +44,11 @@ export function Details() {
             <main>
               <TitleWithStars>
                 <h1>{data.title}</h1>
-                {/* <Stars>
-                  {Array.from({ length: stars }, (_, index) => (
-                    <IoStar key={index} />
-                  ))}
-                  {Array.from({ length: outlinedStars }, (_, index) => (
-                    <IoStarOutline key={index} />
-                  ))}
-                </Stars> */}
+                <Stars data={data} />
               </TitleWithStars>
               <AuthorAndDate>
                 <div>
-                  <img
-                    src="https://github.com/arthurrios.png"
-                    alt="Foto do usuário"
-                  />
+                  <img src={authorAvatar} alt="Foto do usuário" />
                   <span>Por {data.author}</span>
                 </div>
                 <div>

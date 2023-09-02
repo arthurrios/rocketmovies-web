@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 import { ReturnButton } from '../../components/ReturnButton'
 import { Header } from '../../components/Header'
 import { Container, Form, Tags } from './styles'
@@ -9,10 +10,12 @@ import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import { api } from '../../services/api'
 import { useAuth } from '../../hooks/auth'
+import avatarPlaceholder from '../../assets/avatar_placeholder.svg'
 
 export function NewMovie() {
   const { user } = useAuth()
   const author = user.name
+  const author_avatar = user.avatar
 
   const [title, setTitle] = useState('')
   const [rating, setRating] = useState('')
@@ -65,6 +68,7 @@ export function NewMovie() {
       description,
       tags,
       author,
+      author_avatar,
     })
 
     alert('Movie note created successfully!')
