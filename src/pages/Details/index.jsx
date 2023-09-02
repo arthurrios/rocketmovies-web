@@ -10,10 +10,14 @@ import { useNavigate, useParams } from 'react-router-dom'
 import { api } from '../../services/api'
 import { Stars } from '../../components/Stars'
 import avatarPlaceholder from '../../assets/avatar_placeholder.svg'
+import { useAuth } from '../../hooks/auth'
 
 export function Details() {
+  const { user } = useAuth()
+
   const [data, setData] = useState({})
   const [date, setDate] = useState({})
+  const matchedUser = user.id === data.user_id
 
   const params = useParams()
   const navigate = useNavigate()
@@ -77,6 +81,7 @@ export function Details() {
                 <div>
                   <img src={authorAvatar} alt="Foto do usuário" />
                   <span>Por {data.author}</span>
+                  <span>{matchedUser}</span>
                 </div>
                 <div>
                   <LuClock3 />
@@ -88,7 +93,9 @@ export function Details() {
               {data.tags && <Tags data={data} />}
               <p style={{ whiteSpace: 'pre-wrap' }}>{data.description}</p>
             </main>
-            <Button exclude title="Excluir filme" onClick={handleRemove} />
+            {matchedUser && (
+              <Button exclude title="Excluir filme" onClick={handleRemove} />
+            )}
           </>
         )}
       </Container>
