@@ -3,15 +3,21 @@ import { Header } from '../../components/Header'
 import { Button } from '../../components/Button'
 import { Container, TitleAndButton } from './styles'
 import { AiOutlinePlus } from 'react-icons/ai'
-import { Link } from 'react-router-dom'
-import { Stars } from '../../components/Stars'
+import { Link, useNavigate } from 'react-router-dom'
 import { MovieCard } from '../../components/MovieCard'
 import { useEffect, useState } from 'react'
 import { api } from '../../services/api'
+import { Input } from '../../components/Input'
 
 export function Home() {
   const [notes, setNotes] = useState([])
   const [search, setSearch] = useState('')
+
+  const navigate = useNavigate()
+
+  function handleDetails(id) {
+    navigate(`/details/${id}`)
+  }
 
   useEffect(() => {
     async function fetchNotes() {
@@ -21,10 +27,14 @@ export function Home() {
 
     fetchNotes()
   }, [search])
-  console.log(notes)
   return (
     <>
-      <Header />
+      <Header>
+        <Input
+          placeholder="Pesquisar pelo título"
+          onChange={(e) => setSearch(e.target.value)}
+        />
+      </Header>
       <Container>
         <TitleAndButton>
           <h1>Meus filmes</h1>
@@ -34,7 +44,11 @@ export function Home() {
         </TitleAndButton>
         <main>
           {notes.map((note) => (
-            <MovieCard key={String(note.id)} data={note} />
+            <MovieCard
+              key={String(note.id)}
+              data={note}
+              onClick={() => handleDetails(note.id)}
+            />
           ))}
         </main>
       </Container>

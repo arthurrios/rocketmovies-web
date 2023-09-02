@@ -16,6 +16,7 @@ export const Container = styled.header`
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: flex-end;
   }
 `
 export const Profile = styled.div`

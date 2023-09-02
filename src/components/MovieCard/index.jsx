@@ -4,9 +4,9 @@ import { Tags } from '../Tags'
 
 import { Stars } from '../Stars'
 
-export function MovieCard({ data }) {
+export function MovieCard({ data, ...props }) {
   return (
-    <Container>
+    <Container {...props}>
       <h2>{data.title}</h2>
       <Stars data={data} card />
       <p>{data.description}</p>

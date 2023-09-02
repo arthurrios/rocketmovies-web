@@ -1,11 +1,10 @@
 import { useNavigate } from 'react-router-dom'
-import { Input } from '../Input'
 import { Container, HomeLink, Profile } from './styles'
 import { useAuth } from '../../hooks/auth'
 import { api } from '../../services/api'
 import avatarPlaceholder from '../../assets/avatar_placeholder.svg'
 
-export function Header() {
+export function Header({ children }) {
   const { signOut, user } = useAuth()
   const navigate = useNavigate()
 
@@ -28,7 +27,7 @@ export function Header() {
         <h1>RocketMovies</h1>
       </HomeLink>
       <div>
-        <Input placeholder="Pesquisar pelo título" />
+        {children}
         <Profile to="/profile">
           <div>
             <button

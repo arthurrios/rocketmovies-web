@@ -1,14 +1,17 @@
 import { styled } from 'styled-components'
 
-export const Container = styled.div`
+export const Container = styled.button`
   width: 100%;
   height: 14rem;
   padding: 2rem;
   border-radius: 16px;
   background: ${({ theme }) => theme.colors.pink_low};
+  border: none;
 
   > h2 {
     margin-bottom: 0.5rem;
+    color: ${({ theme }) => theme.colors.white};
+    text-align: left;
   }
 
   > p {
