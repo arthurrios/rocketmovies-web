@@ -7,6 +7,7 @@ export const Container = styled.textarea`
   color: ${({ theme }) => theme.colors.white};
   border-radius: 10px;
   padding: 1rem 1.5rem;
+  white-space: pre-wrap;
 
   border: none;
   resize: none;

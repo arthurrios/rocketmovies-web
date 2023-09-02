@@ -1,11 +1,17 @@
 import { Container, Tag } from './styles'
 
-export function Tags({ card = false }) {
+export function Tags({ card = false, data }) {
   return (
     <Container>
-      <Tag $card={card.toString()}>Ficção Científica</Tag>
-      <Tag $card={card.toString()}>Drama</Tag>
-      <Tag $card={card.toString()}>Família</Tag>
+      {data.tags.map((tag) => (
+        <Tag
+          key={tag.id}
+          $card={card.toString()}
+          style={{ textTransform: 'capitalize' }}
+        >
+          {tag.name}
+        </Tag>
+      ))}
     </Container>
   )
 }
