@@ -24,7 +24,7 @@ export function Header({ children }) {
   return (
     <Container>
       <HomeLink to="/">
-        <h1>RocketMovies</h1>
+        <h1>Rocket Movies</h1>
       </HomeLink>
       <div>
         {children}
