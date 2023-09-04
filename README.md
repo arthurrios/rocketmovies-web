@@ -1,8 +1,6 @@
-# React + Vite
+# RocketMovies
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project was originally made in a Web development course called Explorer. In this application you can rate and write evaluations from different movies you watched and keep them noted in your account.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[Link to Backend](https://github.com/arthurrios/rocketmovies-db)
+[Link to Frontend](https://github.com/arthurrios/rocketmovies-interface)
