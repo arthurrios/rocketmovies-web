@@ -10,7 +10,6 @@ import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import { api } from '../../services/api'
 import { useAuth } from '../../hooks/auth'
-import avatarPlaceholder from '../../assets/avatar_placeholder.svg'
 
 export function NewMovie() {
   const { user } = useAuth()

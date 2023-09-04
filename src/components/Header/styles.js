@@ -15,6 +15,7 @@ export const Container = styled.header`
   > div {
     width: 100%;
     display: flex;
+    gap: 1rem;
     align-items: center;
     justify-content: flex-end;
   }
@@ -23,7 +24,8 @@ export const Profile = styled.div`
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  min-width: 12.375rem;
+  width: 100%;
+  max-width: 15rem;
 
   > div {
     display: flex;
@@ -67,7 +69,8 @@ export const Profile = styled.div`
 export const HomeLink = styled(Link)`
   > h1 {
     font-size: 1.5rem;
-    margin-right: 4rem;
+    width: 12rem;
+    margin-right: 1rem;
     color: ${({ theme }) => theme.colors.pink};
   }
 `
