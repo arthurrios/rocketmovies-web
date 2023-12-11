@@ -8,4 +8,4 @@ This project was originally made in a Web development course called Explorer. In
 
 ## Deploy
 
-[RocketMovies](https://rocketmovies-project.netlify.app/)
+[Rocket Movies](https://rocketmovies-project.netlify.app/)
